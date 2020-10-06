@@ -8,7 +8,7 @@ class ShareModal extends ModalDialog {
   constructor(player, options) {
     super(player, options);
 
-    this.playerClassName = 'vjs-videojs-share_open';
+    this.playerClassName = 'vjs-videojs-modal_open';
   }
 
   open() {

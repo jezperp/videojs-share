@@ -1446,10 +1446,10 @@ var ShareModalContent = function () {
 
     // Embed code container should be optional if there is no Embed Code formatter available
     if (this.options.embedCode) {
-      embedContainer = '\n        <div class="vjs-share__subtitle hidden-xs">' + this.player.localize('Embed Code') + ':</div>\n        <div class="vjs-share__short-link-wrapper hidden-xs">\n          <input class="vjs-share__short-link" type="text" readonly="true" value="' + this.options.embedCode + '">\n          <div class="vjs-share__btn">\n            ' + copyBtn + '\n          </div>\n        </div>';
+      embedContainer = '\n        <div class="vjs-share__subtitle hidden-xs">' + this.player.localize('Embed Video') + '</div>\n        <div class="vjs-share__short-link-wrapper hidden-xs">\n          <input class="vjs-share__short-link" type="text" readonly="true" value="' + this.options.embedCode + '">\n          <div class="vjs-share__btn">\n            ' + copyBtn + '\n          </div>\n        </div>';
     }
 
-    wrapper.innerHTML = '<div class="vjs-share">\n      <div class="vjs-share__top hidden-sm">\n        <div class="vjs-share__title">' + this.player.localize('Share') + '</div>\n      </div>\n\n      <div class="vjs-share__middle">\n        <div class="vjs-share__subtitle hidden-xs">' + this.player.localize('Direct Link') + ':</div>\n        <div class="vjs-share__short-link-wrapper">\n          <input class="vjs-share__short-link" type="text" readonly="true" value="' + this.options.url + '">\n          <div class="vjs-share__btn">\n            ' + copyBtn + '\n          </div>\n        </div>\n\n        ' + embedContainer + '\n      </div>\n\n      <div class="vjs-share__bottom">\n        <div class="vjs-share__socials">\n          ' + this._getSocialItems().join('') + '\n        </div>\n      </div>\n    </div>';
+    wrapper.innerHTML = '<div class="vjs-share">\n      <div class="vjs-share__top hidden-sm">\n        <div class="vjs-share__title">' + this.player.localize('Share') + '</div>\n      </div>\n\n      <div class="vjs-share__middle">\n        <div class="vjs-share__subtitle hidden-xs">' + this.player.localize('Direct Link') + '</div>\n        <div class="vjs-share__short-link-wrapper">\n          <input class="vjs-share__short-link" type="text" readonly="true" value="' + this.options.url + '">\n          <div class="vjs-share__btn">\n            ' + copyBtn + '\n          </div>\n        </div>\n\n        ' + embedContainer + '\n      </div>\n\n      <div class="vjs-share__bottom">\n        <div class="vjs-share__socials">\n          ' + this._getSocialItems().join('') + '\n        </div>\n      </div>\n    </div>';
 
     this.content = wrapper.firstChild;
   };
@@ -1562,7 +1562,7 @@ var ShareModal = function (_ModalDialog) {
 
     var _this = possibleConstructorReturn(this, _ModalDialog.call(this, player, options));
 
-    _this.playerClassName = 'vjs-videojs-share_open';
+    _this.playerClassName = 'vjs-videojs-modal_open';
     return _this;
   }
 
