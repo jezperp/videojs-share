@@ -28,7 +28,7 @@ function getRedirectUri() {
 }
 
 function getEmbedCode() {
-  return '<iframe src=\'' + url + '\' width=\'560\' height=\'315\' frameborder=\'0\' allowfullscreen></iframe>';
+  return '<iframe src="' + url + '" width="560" height="315" frameborder="0" allowfullscreen></iframe>';
 }
 
 function getSocials() {
